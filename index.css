@@ -1,0 +1,456 @@
+@font-face {
+  font-family: "Baloo Bhai";
+  src: url("./fonts/BalooBhai2-Bold.ttf"); }
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Regular.ttf"); }
+.col-item {
+  border: 1px solid rgba(128, 128, 128, 0.3); }
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 132px;
+  margin: 30px 16px 16px 16px;
+  background: #0C0B0B;
+  border-radius: 24px; }
+  .menu .logo .logo--item {
+    width: 40px;
+    height: 40px;
+    background-image: url(./icons/F.logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 44px 0px; }
+  .menu .nav {
+    margin: 44px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center; }
+    .menu .nav .nav--item {
+      width: 26px;
+      height: 26px; }
+      .menu .nav .nav--item:not(:last-of-type) {
+        margin-bottom: 64px; }
+      .menu .nav .nav--item:last-of-type {
+        margin-top: 155px; }
+
+.nav--item:nth-child(1) {
+  background-image: url(./icons/home.png);
+  background-repeat: no-repeat; }
+
+.nav--item:nth-child(2) {
+  background-image: url(./icons/icon1.png);
+  background-repeat: no-repeat; }
+
+.nav--item:nth-child(3) {
+  background-image: url(./icons/icon2.png);
+  background-repeat: no-repeat; }
+
+.nav--item:nth-child(4) {
+  background-image: url(./icons/icon3.png);
+  background-repeat: no-repeat; }
+
+.nav--item:nth-child(5) {
+  background-image: url(./icons/icon4.png);
+  background-repeat: no-repeat; }
+
+.nav--item:nth-child(6) {
+  background-image: url(./icons/exit.png);
+  background-repeat: no-repeat; }
+
+.pos-r {
+  position: relative; }
+
+.pos-a {
+  position: absolute; }
+
+.bg-cont {
+  background-color: rgba(128, 128, 128, 0.15);
+  border-radius: 14px; }
+
+.left-size {
+  padding: 30px 30px; }
+  .left-size h2 {
+    font-size: 36px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-family: Baloo Bhai; }
+  .left-size p {
+    font-size: 16px;
+    margin-bottom: 0px;
+    font-family: Roboto; }
+
+.mt {
+  margin-top: 55px; }
+
+.photo {
+  height: 160px;
+  width: 190px; }
+  .photo::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+    height: 175px;
+    width: 190px;
+    background-image: url(./img/person.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+
+.col-course {
+  padding: 0px; }
+
+.cont-course {
+  margin-top: 25px;
+  padding-left: 12px; }
+
+.course {
+  padding: 0px 24px 0px 8px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center; }
+  .course .course__item {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 14px; }
+    .course .course__item:not(:nth-child(4)) {
+      height: 64px; }
+    .course .course__item:nth-child(1) {
+      width: 64px;
+      background-color: rgba(255, 255, 255, 0.5);
+      background-image: url(./icons/course1.png);
+      background-repeat: no-repeat;
+      background-position: center; }
+    .course .course__item:nth-child(3) {
+      height: 40px;
+      width: 40px;
+      background-image: url(./icons/progress.png); }
+    .course .course__item h2 {
+      font-size: 16px;
+      font-family: Baloo Bhai;
+      margin-bottom: 0px;
+      margin-top: 15px; }
+    .course .course__item p {
+      font-size: 13px;
+      font-family: Roboto;
+      margin-bottom: 0px; }
+
+.button {
+  height: 40px;
+  width: 120px;
+  border-radius: 8px;
+  border: 2px solid black;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 38px;
+  text-align: center; }
+  .button:hover {
+    cursor: pointer; }
+
+.button-black {
+  background-color: black;
+  color: white; }
+
+.arrow {
+  height: 40px;
+  width: 40px;
+  background-image: url(./icons/arrow.png);
+  background-repeat: no-repeat;
+  background-position: center; }
+  .arrow:nth-child(2) {
+    transform: rotate(180deg); }
+  .arrow:hover {
+    cursor: pointer; }
+
+.col-3__arrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center; }
+
+.cont-courses {
+  margin-top: 25px;
+  padding: 0px; }
+
+.courses__menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center; }
+  .courses__menu .courses__menu--item {
+    font-family: Baloo Bhai;
+    font-size: 16px; }
+    .courses__menu .courses__menu--item:not(:first-child) {
+      color: rgba(0, 0, 0, 0.3); }
+    .courses__menu .courses__menu--item:not(:last-child) {
+      margin-right: 30px; }
+
+.courses {
+  padding: 0px 24px 0px 8px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center; }
+  .courses .courses__item {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 14px; }
+    .courses .courses__item:nth-child(1) {
+      height: 64px;
+      width: 64px;
+      background-color: rgba(255, 255, 255, 0.5); }
+    .courses .courses__item:nth-child(2) {
+      width: 150px; }
+    .courses .courses__item h2 {
+      font-size: 16px;
+      font-family: Baloo Bhai;
+      margin-bottom: 0px;
+      margin-top: 15px; }
+    .courses .courses__item p {
+      font-size: 13px;
+      font-family: Roboto;
+      margin-bottom: 0px; }
+
+.col-12:nth-child(3) .courses .courses__item:nth-child(1) {
+  background-image: url(./icons/course2.png);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.col-12:nth-child(4) .courses .courses__item:nth-child(1) {
+  background-image: url(./icons/course3.png);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.col-12:nth-child(5) .courses .courses__item:nth-child(1) {
+  background-image: url(./icons/course4.png);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.col-12:nth-child(6) .courses .courses__item:nth-child(1) {
+  background-image: url(./icons/course5.png);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.col-12:nth-child(7) .courses .courses__item:nth-child(1) {
+  background-image: url(./icons/course6.png);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.time, .reit {
+  font-size: 13px;
+  font-family: Roboto;
+  margin-bottom: 0px;
+  position: relative;
+  padding-left: 30px; }
+  .time:before, .reit:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: calc( 100% - 20px ); }
+
+.time:before {
+  background-image: url(./icons/clock.png); }
+
+.reit:before {
+  background-image: url(./icons/fire.png); }
+
+.col-pad {
+  padding: 0px; }
+
+.search {
+  position: relative; }
+  .search .search__item {
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.15);
+    color: black;
+    border: 0px;
+    padding: 5px 5px 5px 40px;
+    font-size: 20px;
+    border-radius: 8px;
+    outline: none; }
+  .search:before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 10px;
+    left: 10px;
+    background-image: url(./icons/search.png);
+    background-position: center;
+    background-repeat: no-repeat; }
+
+.my__menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center; }
+  .my__menu .my-menu--item {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    position: relative; }
+    .my__menu .my-menu--item:nth-child(1) {
+      background-image: url(./icons/bell.png);
+      background-repeat: no-repeat;
+      background-position: 0px 10px; }
+      .my__menu .my-menu--item:nth-child(1):after {
+        content: "1";
+        width: 14px;
+        position: absolute;
+        background-color: red;
+        color: white;
+        border-radius: 15px;
+        font-size: 10px;
+        font-family: Roboto;
+        text-align: center;
+        top: 2px;
+        right: 12px; }
+    .my__menu .my-menu--item:nth-child(2) {
+      background-image: url(./icons/photo.png);
+      background-repeat: no-repeat;
+      background-position: center; }
+      .my__menu .my-menu--item:nth-child(2):after {
+        content: "";
+        position: absolute;
+        border: solid black;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        top: 15px;
+        left: calc( 100% + 10px ); }
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 25px; }
+  .statistics h2 {
+    font-size: 24px;
+    font-family: Baloo Bhai;
+    margin-bottom: 20px; }
+  .statistics .statistics__menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 32px; }
+    .statistics .statistics__menu .statistics__menu--item {
+      font-family: Baloo Bhai;
+      font-size: 16px; }
+      .statistics .statistics__menu .statistics__menu--item:not(:first-child) {
+        color: rgba(0, 0, 0, 0.3); }
+      .statistics .statistics__menu .statistics__menu--item:not(:last-child) {
+        margin-right: 30px; }
+      .statistics .statistics__menu .statistics__menu--item:last-child {
+        margin-left: 50px;
+        padding-right: 10px;
+        position: relative;
+        width: 88px;
+        height: 32px;
+        font-size: 13px;
+        border-radius: 8px;
+        font-family: Roboto;
+        text-align: center;
+        line-height: 32px;
+        color: black;
+        background-color: rgba(128, 128, 128, 0.15); }
+        .statistics .statistics__menu .statistics__menu--item:last-child:hover {
+          cursor: pointer; }
+        .statistics .statistics__menu .statistics__menu--item:last-child:after {
+          content: "";
+          position: absolute;
+          border: solid black;
+          border-width: 0 1px 1px 0;
+          display: inline-block;
+          padding: 3px;
+          transform: rotate(45deg);
+          top: 10px;
+          right: 10px; }
+
+.graph {
+  width: 392px;
+  height: 267px;
+  background-image: url(./img/table.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; }
+
+.premium {
+  padding: 24px 0px 15px 24px;
+  position: relative; }
+  .premium h2 {
+    font-size: 24px;
+    font-family: Baloo Bhai;
+    margin-bottom: 20px; }
+  .premium p {
+    font-size: 16px;
+    font-family: Roboto;
+    margin-bottom: 24px; }
+  .premium:after {
+    content: "";
+    position: absolute;
+    top: 37px;
+    right: 40px;
+    width: 125px;
+    height: 125px;
+    background-image: url(./img/premium.png);
+    background-position: center;
+    background-repeat: no-repeat; }
+
+.my-stat {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center; }
+  .my-stat .stat {
+    font-size: 16px;
+    font-family: Roboto;
+    padding: 22px 15px 22px 75px;
+    position: relative;
+    margin-top: 25px;
+    width: calc( 100% - 13px ); }
+    .my-stat .stat:not(:last-of-type) {
+      margin-right: 26px; }
+
+.stat:nth-child(1):before {
+  content: "11";
+  position: absolute;
+  font-size: 64px;
+  font-family: Baloo Bhai;
+  left: 20px;
+  top: 0px; }
+
+.stat:nth-child(2):before {
+  content: "4";
+  position: absolute;
+  font-size: 64px;
+  font-family: Baloo Bhai;
+  left: 20px;
+  top: 0px; }
+
+/*# sourceMappingURL=index.css.map */

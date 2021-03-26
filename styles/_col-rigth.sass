@@ -1,0 +1,164 @@
+.col-pad
+    padding: 0px
+    
+.search
+    position: relative        
+    .search__item                        
+        width: 100%
+        background-color: rgba(128, 128, 128, 0.15)
+        color: black
+        border: 0px
+        padding: 5px 5px 5px 40px
+        font-size: 20px    
+        border-radius: 8px  
+        outline: none                  
+    &:before
+        content: ""
+        position: absolute
+        width: 21px
+        height: 21px
+        top: 10px
+        left: 10px        
+        background-image: url(./icons/search.png)
+        background-position: center
+        background-repeat: no-repeat
+
+.my__menu
+    @include flex(flex, row, nowrap, flex-end, center)
+    .my-menu--item
+        width: 40px
+        height: 40px
+        margin-right: 20px
+        position: relative
+
+        &:nth-child(1)            
+            background-image: url(./icons/bell.png)
+            background-repeat: no-repeat
+            background-position: 0px 10px
+            &:after
+                content: "1"
+                width: 14px
+                position: absolute
+                background-color: red
+                color: white
+                border-radius: 15px
+                font-size: 10px
+                font-family: $ff2
+                text-align: center
+                top: 2px
+                right: 12px
+
+        &:nth-child(2)
+            background-image: url(./icons/photo.png)
+            background-repeat: no-repeat
+            background-position: center            
+            &:after
+                content: ""
+                position: absolute
+                border: solid black
+                border-width: 0 1px 1px 0
+                display: inline-block
+                padding: 3px
+                transform: rotate(45deg)
+                top: 15px
+                left: calc( 100% + 10px ) 
+    
+
+.statistics
+    @include flex(flex, column, nowrap, center, flex-start)
+    margin-top: 25px
+    h2
+        font-size: 24px
+        font-family: $ff1
+        margin-bottom: 20px
+    .statistics__menu
+        @include flex(flex, row, nowrap, flex-start, center)
+        margin-bottom: 32px
+        .statistics__menu--item
+            font-family: $ff1
+            font-size: 16px
+            &:not(:first-child)
+                color: rgba(0, 0, 0, 0.3)
+            &:not(:last-child)
+                margin-right: 30px
+            &:last-child
+                margin-left: 50px
+                padding-right: 10px
+                position: relative
+                width: 88px
+                height: 32px
+                font-size: 13px
+                border-radius: 8px
+                font-family: $ff2
+                text-align: center
+                line-height: 32px
+                color: black
+                background-color: rgba(128, 128, 128, 0.15)
+                &:hover
+                    cursor: pointer
+                &:after
+                    content: ""
+                    position: absolute
+                    border: solid black
+                    border-width: 0 1px 1px 0
+                    display: inline-block
+                    padding: 3px
+                    transform: rotate(45deg)
+                    top: 10px
+                    right: 10px    
+.graph
+    width: 392px
+    height: 267px
+    background-image: url(./img/table.png)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+
+.premium
+    padding: 24px 0px 15px 24px
+    position: relative
+    h2
+        font-size: 24px 
+        font-family: $ff1
+        margin-bottom: 20px
+    p
+        font-size: 16px 
+        font-family: $ff2
+        margin-bottom: 24px         
+    &:after
+        content: ""
+        position: absolute
+        top: 37px
+        right: 40px
+        width: 125px
+        height: 125px
+        background-image: url(./img/premium.png)
+        background-position: center
+        background-repeat: no-repeat
+
+.my-stat
+    @include flex(flex, row, nowrap, flex-start, center)
+    .stat
+        font-size: 16px 
+        font-family: $ff2
+        padding: 22px 15px 22px 75px
+        position: relative
+        margin-top: 25px
+        width: calc( 100% - 13px )    
+        &:not(:last-of-type)
+            margin-right: 26px 
+        
+    
+$st: ("11", "4")
+@for $a from 1 through length($st)
+    $this-st: nth($st, $a)
+    .stat
+        &:nth-child(#{$a})
+            &:before
+                content: "#{$this-st}"
+                position: absolute
+                font-size: 64px
+                font-family: $ff1
+                left: 20px
+                top: 0px
+        

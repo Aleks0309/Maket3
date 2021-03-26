@@ -1,0 +1,178 @@
+.pos-r
+    position: relative
+.pos-a
+    position: absolute
+
+.bg-cont
+    background-color: rgba(128, 128, 128, 0.15)
+    border-radius: 14px   
+
+.left-size    
+    padding: 30px 30px 
+    h2
+        font-size: 36px 
+        margin-top: 15px
+        margin-bottom: 0px
+        font-family: $ff1
+    p
+        font-size: 16px
+        margin-bottom: 0px
+        font-family: $ff2
+
+.mt
+    margin-top: 55px 
+
+.photo
+    height: 160px
+    width: 190px
+    &::after
+        content: ""
+        position: absolute
+        bottom: 0px
+        z-index: 1
+        height: 175px
+        width: 190px
+        background-image: url(./img/person.png)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+
+.col-course    
+    padding: 0px
+.cont-course
+    margin-top: 25px
+    padding-left: 12px 
+
+.course
+    padding: 0px 24px 0px 8px
+    @include flex(flex, row, nowrap, space-between, center)    
+    .course__item        
+        margin-top: 8px
+        margin-bottom: 8px
+        border-radius: 14px 
+        &:not(:nth-child(4))
+            height: 64px            
+        &:nth-child(1)
+            width: 64px
+            background-color: rgba(255, 255, 255, 0.5)
+            background-image: url(./icons/course1.png)
+            background-repeat: no-repeat
+            background-position: center                  
+        &:nth-child(3)
+            height: 40px
+            width: 40px            
+            background-image: url(./icons/progress.png)            
+        h2
+            font-size: 16px 
+            font-family: $ff1
+            margin-bottom: 0px
+            margin-top: 15px 
+        p
+            font-size: 13px 
+            font-family: $ff2
+            margin-bottom: 0px
+
+.button
+    height: 40px    
+    width: 120px
+    border-radius: 8px
+    border: 2px solid black
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 13px
+    line-height: 38px
+    text-align: center
+    &:hover
+        cursor: pointer
+
+.button-black
+    background-color: black
+    color: white
+
+.arrow
+    height: 40px
+    width: 40px
+    background-image: url(./icons/arrow.png)
+    background-repeat: no-repeat
+    background-position: center
+    &:nth-child(2)
+        transform: rotate(180deg)
+    &:hover
+        cursor: pointer         
+
+.col-3__arrow
+    @include flex(flex, row, nowrap, space-around, center)
+
+.cont-courses
+    margin-top: 25px    
+    padding: 0px    
+
+.courses__menu
+    @include flex(flex, row, nowrap, flex-start, center)
+    .courses__menu--item
+        font-family: $ff1
+        font-size: 16px
+        &:not(:first-child)
+            color: rgba(0, 0, 0, 0.3)
+        &:not(:last-child)
+            margin-right: 30px
+
+.courses
+    padding: 0px 24px 0px 8px
+    margin-top: 16px
+    @include flex(flex, row, nowrap, space-between, center)    
+    .courses__item        
+        margin-top: 8px
+        margin-bottom: 8px
+        border-radius: 14px 
+        &:nth-child(1)
+            height: 64px
+            width: 64px
+            background-color: rgba(255, 255, 255, 0.5)
+        &:nth-child(2)
+            width: 150px
+        h2
+            font-size: 16px 
+            font-family: $ff1
+            margin-bottom: 0px
+            margin-top: 15px 
+        p
+            font-size: 13px 
+            font-family: $ff2
+            margin-bottom: 0px
+
+$courses-icon: ("./icons/course2.png", "./icons/course3.png", "./icons/course4.png", "./icons/course5.png", "./icons/course6.png")
+@for $i from 1 through length($courses-icon)
+    $this-courses-icon: nth($courses-icon, $i)
+    .col-12
+        &:nth-child(#{$i + 2})            
+            .courses            
+                .courses__item
+                    &:nth-child(1)
+                        background-image: url(#{$this-courses-icon})
+                        background-repeat: no-repeat
+                        background-position: center
+            
+.time, .reit
+    font-size: 13px 
+    font-family: $ff2
+    margin-bottom: 0px
+    position: relative 
+    padding-left: 30px
+    &:before
+        content: ""
+        width: 16px
+        height: 16px        
+        background-repeat: no-repeat
+        background-position: center
+        position: absolute
+        right: calc( 100% - 20px )
+
+.time    
+    &:before
+        background-image: url(./icons/clock.png)
+.reit
+    &:before
+        background-image: url(./icons/fire.png)                  
+         

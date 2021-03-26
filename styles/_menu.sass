@@ -1,0 +1,39 @@
+.col-item    
+    border: 1px solid $color
+
+.menu
+    @include flex(flex, column, wrap, flex-start, center)
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.7)
+    height: 100vh
+    width: 132px
+    margin: 30px 16px 16px 16px
+    background: #0C0B0B
+    border-radius: 24px
+    .logo      
+        .logo--item
+            width: 40px
+            height: 40px
+            background-image: url(./icons/F.logo.png)
+            background-repeat: no-repeat
+            background-size: contain
+            margin: 44px 0px
+    .nav
+        margin: 44px 0px        
+        @include flex(flex, column, wrap, flex-start, center)
+        .nav--item
+            width: 26px
+            height: 26px
+            &:not(:last-of-type)
+                margin-bottom: 64px
+            &:last-of-type
+                margin-top: 155px  
+
+$icons-nav: ('./icons/home.png', './icons/icon1.png', './icons/icon2.png', './icons/icon3.png', './icons/icon4.png', './icons/exit.png')
+@for $i from 1 through length($icons-nav)
+    $icon: nth($icons-nav, $i)
+    .nav--item:nth-child(#{$i})
+        background-image: url(#{$icon})
+        background-repeat: no-repeat
+        
+    
+     
