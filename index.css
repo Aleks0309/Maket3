@@ -184,6 +184,11 @@
 .cont-courses {
   margin-top: 25px;
   padding: 0px; }
+  .cont-courses .row h2 {
+    font-size: 24px;
+    font-family: Baloo Bhai;
+    margin-bottom: 25px;
+    margin-top: 15px; }
 
 .courses__menu {
   display: flex;
